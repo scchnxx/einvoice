@@ -2,7 +2,7 @@ import Foundation
 
 struct InvWinningList: InvQueryable {
     
-    enum Params: String {
+    enum Parameters: String, CaseIterable {
         case invTerm
     }
     

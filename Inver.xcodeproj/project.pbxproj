@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		096ADF7A23BFADF800DB949E /* InvAppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096ADF7923BFADF800DB949E /* InvAppID.swift */; };
 		8502E98623BDCADF00251134 /* InvHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502E98523BDCADF00251134 /* InvHeader.swift */; };
-		8502E98823BDD19C00251134 /* InvAppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502E98723BDD19C00251134 /* InvAppID.swift */; };
 		8502E98A23BDD20A00251134 /* InvDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502E98923BDD20A00251134 /* InvDetail.swift */; };
 		8549CB2B23BDF22E00226362 /* QRCodeScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */; };
 		8594E58923BD82FA000B5191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8594E58823BD82FA000B5191 /* AppDelegate.swift */; };
@@ -30,8 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		096ADF7923BFADF800DB949E /* InvAppID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvAppID.swift; sourceTree = "<group>"; };
 		8502E98523BDCADF00251134 /* InvHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvHeader.swift; sourceTree = "<group>"; };
-		8502E98723BDD19C00251134 /* InvAppID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvAppID.swift; sourceTree = "<group>"; };
 		8502E98923BDD20A00251134 /* InvDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvDetail.swift; sourceTree = "<group>"; };
 		8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewModel.swift; sourceTree = "<group>"; };
 		8594E58523BD82FA000B5191 /* Inver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inver.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +118,7 @@
 		8594E59C23BD839F000B5191 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8502E98723BDD19C00251134 /* InvAppID.swift */,
+				096ADF7923BFADF800DB949E /* InvAppID.swift */,
 				8594E59F23BD944D000B5191 /* InvQueryable.swift */,
 				8594E5A123BD9543000B5191 /* InvResponse.swift */,
 				8594E59D23BD83AE000B5191 /* InvWinningList.swift */,
@@ -211,10 +211,10 @@
 			files = (
 				8594E58D23BD82FA000B5191 /* MainViewController.swift in Sources */,
 				8594E58923BD82FA000B5191 /* AppDelegate.swift in Sources */,
-				8502E98823BDD19C00251134 /* InvAppID.swift in Sources */,
 				8594E59E23BD83AE000B5191 /* InvWinningList.swift in Sources */,
 				8502E98623BDCADF00251134 /* InvHeader.swift in Sources */,
 				8502E98A23BDD20A00251134 /* InvDetail.swift in Sources */,
+				096ADF7A23BFADF800DB949E /* InvAppID.swift in Sources */,
 				85E5959623BEF28F00C77B7A /* ViewModel.swift in Sources */,
 				8594E5A023BD944D000B5191 /* InvQueryable.swift in Sources */,
 				8594E5AD23BD9C62000B5191 /* QRCodeScannerViewController.swift in Sources */,

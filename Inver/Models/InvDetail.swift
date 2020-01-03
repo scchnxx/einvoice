@@ -2,7 +2,7 @@ import Foundation
 
 struct InvDetail: InvQueryable {
     
-    enum Params: String {
+    enum Parameters: String, CaseIterable {
         case type
         case invNum
         case generation
