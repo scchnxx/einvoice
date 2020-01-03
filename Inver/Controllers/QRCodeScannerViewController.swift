@@ -25,7 +25,7 @@ class QRCodeScannerViewController: UIViewController {
         layer.opacity = 0
         layer.path = {
             let path = CGMutablePath()
-            let len = CGFloat(6)
+            let len = CGFloat(8)
             path.addLines(between: [CGPoint(x: rect.midX, y: rect.minY), CGPoint(x: rect.midX, y: rect.minY + len)])
             path.addLines(between: [CGPoint(x: rect.midX, y: rect.maxY), CGPoint(x: rect.midX, y: rect.maxY - len)])
             path.addLines(between: [CGPoint(x: rect.minX, y: rect.midY), CGPoint(x: rect.minX + len, y: rect.midY)])
