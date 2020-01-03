@@ -25,7 +25,7 @@
 		8594E5A923BD957A000B5191 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8594E5A823BD957A000B5191 /* RxCocoa */; };
 		8594E5AB23BD957A000B5191 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 8594E5AA23BD957A000B5191 /* RxBlocking */; };
 		8594E5AD23BD9C62000B5191 /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8594E5AC23BD9C62000B5191 /* QRCodeScannerViewController.swift */; };
-		85E5959423BECDEE00C77B7A /* InvInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5959323BECDEE00C77B7A /* InvInfo.swift */; };
+		85E5959423BECDEE00C77B7A /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5959323BECDEE00C77B7A /* Invoice.swift */; };
 		85E5959623BEF28F00C77B7A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5959523BEF28F00C77B7A /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,7 @@
 		8594E59F23BD944D000B5191 /* InvQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvQueryable.swift; sourceTree = "<group>"; };
 		8594E5A123BD9543000B5191 /* InvResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvResponse.swift; sourceTree = "<group>"; };
 		8594E5AC23BD9C62000B5191 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
-		85E5959323BECDEE00C77B7A /* InvInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvInfo.swift; sourceTree = "<group>"; };
+		85E5959323BECDEE00C77B7A /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		85E5959523BEF28F00C77B7A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,8 +68,8 @@
 		8502E98223BDC0D800251134 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */,
 				85E5959523BEF28F00C77B7A /* ViewModel.swift */,
+				8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 				8594E59D23BD83AE000B5191 /* InvWinningList.swift */,
 				8502E98523BDCADF00251134 /* InvHeader.swift */,
 				8502E98923BDD20A00251134 /* InvDetail.swift */,
-				85E5959323BECDEE00C77B7A /* InvInfo.swift */,
+				85E5959323BECDEE00C77B7A /* Invoice.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 				8594E5A023BD944D000B5191 /* InvQueryable.swift in Sources */,
 				8594E5AD23BD9C62000B5191 /* QRCodeScannerViewController.swift in Sources */,
 				8594E5A223BD9543000B5191 /* InvResponse.swift in Sources */,
-				85E5959423BECDEE00C77B7A /* InvInfo.swift in Sources */,
+				85E5959423BECDEE00C77B7A /* Invoice.swift in Sources */,
 				8594E58B23BD82FA000B5191 /* SceneDelegate.swift in Sources */,
 				8549CB2B23BDF22E00226362 /* QRCodeScannerViewModel.swift in Sources */,
 			);
