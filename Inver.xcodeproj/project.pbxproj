@@ -3,27 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8502E98623BDCADF00251134 /* InvHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502E98523BDCADF00251134 /* InvHeader.swift */; };
+		8502E98823BDD19C00251134 /* InvAppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502E98723BDD19C00251134 /* InvAppID.swift */; };
+		8502E98A23BDD20A00251134 /* InvDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502E98923BDD20A00251134 /* InvDetail.swift */; };
+		8549CB2B23BDF22E00226362 /* QRCodeScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */; };
 		8594E58923BD82FA000B5191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8594E58823BD82FA000B5191 /* AppDelegate.swift */; };
 		8594E58B23BD82FA000B5191 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8594E58A23BD82FA000B5191 /* SceneDelegate.swift */; };
-		8594E58D23BD82FA000B5191 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8594E58C23BD82FA000B5191 /* ViewController.swift */; };
+		8594E58D23BD82FA000B5191 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8594E58C23BD82FA000B5191 /* MainViewController.swift */; };
 		8594E59023BD82FA000B5191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8594E58E23BD82FA000B5191 /* Main.storyboard */; };
 		8594E59223BD82FB000B5191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8594E59123BD82FB000B5191 /* Assets.xcassets */; };
 		8594E59523BD82FB000B5191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8594E59323BD82FB000B5191 /* LaunchScreen.storyboard */; };
+		8594E59E23BD83AE000B5191 /* InvWinningList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8594E59D23BD83AE000B5191 /* InvWinningList.swift */; };
+		8594E5A023BD944D000B5191 /* InvQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8594E59F23BD944D000B5191 /* InvQueryable.swift */; };
+		8594E5A223BD9543000B5191 /* InvResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8594E5A123BD9543000B5191 /* InvResponse.swift */; };
+		8594E5A523BD957A000B5191 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8594E5A423BD957A000B5191 /* RxSwift */; };
+		8594E5A723BD957A000B5191 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8594E5A623BD957A000B5191 /* RxRelay */; };
+		8594E5A923BD957A000B5191 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8594E5A823BD957A000B5191 /* RxCocoa */; };
+		8594E5AB23BD957A000B5191 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 8594E5AA23BD957A000B5191 /* RxBlocking */; };
+		8594E5AD23BD9C62000B5191 /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8594E5AC23BD9C62000B5191 /* QRCodeScannerViewController.swift */; };
+		85E5959423BECDEE00C77B7A /* InvInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5959323BECDEE00C77B7A /* InvInfo.swift */; };
+		85E5959623BEF28F00C77B7A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5959523BEF28F00C77B7A /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8502E98523BDCADF00251134 /* InvHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvHeader.swift; sourceTree = "<group>"; };
+		8502E98723BDD19C00251134 /* InvAppID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvAppID.swift; sourceTree = "<group>"; };
+		8502E98923BDD20A00251134 /* InvDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvDetail.swift; sourceTree = "<group>"; };
+		8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewModel.swift; sourceTree = "<group>"; };
 		8594E58523BD82FA000B5191 /* Inver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8594E58823BD82FA000B5191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8594E58A23BD82FA000B5191 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8594E58C23BD82FA000B5191 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8594E58C23BD82FA000B5191 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8594E58F23BD82FA000B5191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8594E59123BD82FB000B5191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8594E59423BD82FB000B5191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8594E59623BD82FB000B5191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8594E59D23BD83AE000B5191 /* InvWinningList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvWinningList.swift; sourceTree = "<group>"; };
+		8594E59F23BD944D000B5191 /* InvQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvQueryable.swift; sourceTree = "<group>"; };
+		8594E5A123BD9543000B5191 /* InvResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvResponse.swift; sourceTree = "<group>"; };
+		8594E5AC23BD9C62000B5191 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
+		85E5959323BECDEE00C77B7A /* InvInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvInfo.swift; sourceTree = "<group>"; };
+		85E5959523BEF28F00C77B7A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +55,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8594E5A923BD957A000B5191 /* RxCocoa in Frameworks */,
+				8594E5AB23BD957A000B5191 /* RxBlocking in Frameworks */,
+				8594E5A723BD957A000B5191 /* RxRelay in Frameworks */,
+				8594E5A523BD957A000B5191 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8502E98223BDC0D800251134 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */,
+				85E5959523BEF28F00C77B7A /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8502E98B23BDDAAD00251134 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8594E58C23BD82FA000B5191 /* MainViewController.swift */,
+				8594E5AC23BD9C62000B5191 /* QRCodeScannerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		8594E57C23BD82FA000B5191 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +102,31 @@
 		8594E58723BD82FA000B5191 /* Inver */ = {
 			isa = PBXGroup;
 			children = (
+				8594E59C23BD839F000B5191 /* Models */,
+				8502E98223BDC0D800251134 /* ViewModels */,
+				8502E98B23BDDAAD00251134 /* Controllers */,
 				8594E58823BD82FA000B5191 /* AppDelegate.swift */,
 				8594E58A23BD82FA000B5191 /* SceneDelegate.swift */,
-				8594E58C23BD82FA000B5191 /* ViewController.swift */,
 				8594E58E23BD82FA000B5191 /* Main.storyboard */,
 				8594E59123BD82FB000B5191 /* Assets.xcassets */,
 				8594E59323BD82FB000B5191 /* LaunchScreen.storyboard */,
 				8594E59623BD82FB000B5191 /* Info.plist */,
 			);
 			path = Inver;
+			sourceTree = "<group>";
+		};
+		8594E59C23BD839F000B5191 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8502E98723BDD19C00251134 /* InvAppID.swift */,
+				8594E59F23BD944D000B5191 /* InvQueryable.swift */,
+				8594E5A123BD9543000B5191 /* InvResponse.swift */,
+				8594E59D23BD83AE000B5191 /* InvWinningList.swift */,
+				8502E98523BDCADF00251134 /* InvHeader.swift */,
+				8502E98923BDD20A00251134 /* InvDetail.swift */,
+				85E5959323BECDEE00C77B7A /* InvInfo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +145,12 @@
 			dependencies = (
 			);
 			name = Inver;
+			packageProductDependencies = (
+				8594E5A423BD957A000B5191 /* RxSwift */,
+				8594E5A623BD957A000B5191 /* RxRelay */,
+				8594E5A823BD957A000B5191 /* RxCocoa */,
+				8594E5AA23BD957A000B5191 /* RxBlocking */,
+			);
 			productName = Inver;
 			productReference = 8594E58523BD82FA000B5191 /* Inver.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 8594E57C23BD82FA000B5191;
+			packageReferences = (
+				8594E5A323BD957A000B5191 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 8594E58623BD82FA000B5191 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +209,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8594E58D23BD82FA000B5191 /* ViewController.swift in Sources */,
+				8594E58D23BD82FA000B5191 /* MainViewController.swift in Sources */,
 				8594E58923BD82FA000B5191 /* AppDelegate.swift in Sources */,
+				8502E98823BDD19C00251134 /* InvAppID.swift in Sources */,
+				8594E59E23BD83AE000B5191 /* InvWinningList.swift in Sources */,
+				8502E98623BDCADF00251134 /* InvHeader.swift in Sources */,
+				8502E98A23BDD20A00251134 /* InvDetail.swift in Sources */,
+				85E5959623BEF28F00C77B7A /* ViewModel.swift in Sources */,
+				8594E5A023BD944D000B5191 /* InvQueryable.swift in Sources */,
+				8594E5AD23BD9C62000B5191 /* QRCodeScannerViewController.swift in Sources */,
+				8594E5A223BD9543000B5191 /* InvResponse.swift in Sources */,
+				85E5959423BECDEE00C77B7A /* InvInfo.swift in Sources */,
 				8594E58B23BD82FA000B5191 /* SceneDelegate.swift in Sources */,
+				8549CB2B23BDF22E00226362 /* QRCodeScannerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8F5X7B8AQ;
 				INFOPLIST_FILE = Inver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = scchnxx.Inver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8F5X7B8AQ;
 				INFOPLIST_FILE = Inver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = scchnxx.Inver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -338,6 +421,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8594E5A323BD957A000B5191 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8594E5A423BD957A000B5191 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8594E5A323BD957A000B5191 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		8594E5A623BD957A000B5191 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8594E5A323BD957A000B5191 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		8594E5A823BD957A000B5191 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8594E5A323BD957A000B5191 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8594E5AA23BD957A000B5191 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8594E5A323BD957A000B5191 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8594E57D23BD82FA000B5191 /* Project object */;
 }
