@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		096ADF7923BFADF800DB949E /* InvAppID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvAppID.swift; sourceTree = "<group>"; };
+		096ADF7923BFADF800DB949E /* InvAppID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InvAppID.swift; path = ../InvAppID.swift; sourceTree = "<group>"; };
 		8502E98523BDCADF00251134 /* InvHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvHeader.swift; sourceTree = "<group>"; };
 		8502E98923BDD20A00251134 /* InvDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvDetail.swift; sourceTree = "<group>"; };
 		8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewModel.swift; sourceTree = "<group>"; };
@@ -65,6 +65,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		096ADF7B23BFBCC700DB949E /* Queryables */ = {
+			isa = PBXGroup;
+			children = (
+				096ADF7923BFADF800DB949E /* InvAppID.swift */,
+				8594E59F23BD944D000B5191 /* InvQueryable.swift */,
+				8594E5A123BD9543000B5191 /* InvResponse.swift */,
+				8594E59D23BD83AE000B5191 /* InvWinningList.swift */,
+				8502E98523BDCADF00251134 /* InvHeader.swift */,
+				8502E98923BDD20A00251134 /* InvDetail.swift */,
+			);
+			path = Queryables;
+			sourceTree = "<group>";
+		};
 		8502E98223BDC0D800251134 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,12 +131,7 @@
 		8594E59C23BD839F000B5191 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				096ADF7923BFADF800DB949E /* InvAppID.swift */,
-				8594E59F23BD944D000B5191 /* InvQueryable.swift */,
-				8594E5A123BD9543000B5191 /* InvResponse.swift */,
-				8594E59D23BD83AE000B5191 /* InvWinningList.swift */,
-				8502E98523BDCADF00251134 /* InvHeader.swift */,
-				8502E98923BDD20A00251134 /* InvDetail.swift */,
+				096ADF7B23BFBCC700DB949E /* Queryables */,
 				85E5959323BECDEE00C77B7A /* Invoice.swift */,
 			);
 			path = Models;
