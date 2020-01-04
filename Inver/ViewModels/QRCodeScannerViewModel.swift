@@ -10,25 +10,23 @@ enum CameraError: Error {
 
 extension QRCodeScannerViewModel {
     
-    struct InternalInput {
-        fileprivate var detectedObject: AnyObserver<[AVMetadataMachineReadableCodeObject]>
-    }
-    
     struct Input {
+        fileprivate var detectedObject: AnyObserver<[AVMetadataMachineReadableCodeObject]>
+        fileprivate var invoice: AnyObserver<Invoice>
         var focus: AnyObserver<CGPoint>
+        var active: AnyObserver<Bool>
     }
     
     struct Output {
         var session: Observable<AVCaptureSession>
         var detectedObjects: Driver<[AVMetadataMachineReadableCodeObject]>
+        var invoice: Observable<Invoice>
         var focusedPoint: Driver<CGPoint>
     }
     
 }
 
 class QRCodeScannerViewModel: NSObject, ViewModel {
-    
-    private var internalInput: InternalInput
     
     var input: Input
     var output: Output
@@ -39,11 +37,16 @@ class QRCodeScannerViewModel: NSObject, ViewModel {
         let rxFocusPoint = PublishSubject<CGPoint>()
         let rxFocus = PublishSubject<CGPoint>()
         let rxDetectedObject = PublishSubject<[AVMetadataMachineReadableCodeObject]>()
+        let rxInvoice = PublishSubject<Invoice>()
+        let rxActive = BehaviorSubject(value: true)
         
-        internalInput = InternalInput(detectedObject: rxDetectedObject.asObserver())
-        input = Input(focus: rxFocus.asObserver())
+        input = Input(detectedObject: rxDetectedObject.asObserver(),
+                      invoice: rxInvoice.asObserver(),
+                      focus: rxFocus.asObserver(),
+                      active: rxActive.asObserver())
         output = Output(session: rxSession.asObserver(),
                         detectedObjects: rxDetectedObject.asDriver(onErrorJustReturn: []),
+                        invoice: rxInvoice.asObservable(),
                         focusedPoint: rxFocusPoint.asDriver(onErrorJustReturn: .zero))
         
         super.init()
@@ -51,7 +54,9 @@ class QRCodeScannerViewModel: NSObject, ViewModel {
         do {
             guard let device = AVCaptureDevice.default(for: .video) else { throw CameraError.initialCameraFailed }
             
-            rxSession.onNext(try setupCamera(device: device))
+            let session = try setupCamera(device: device)
+            
+            rxSession.onNext(session)
             rxSession.onCompleted()
             
             rxFocus
@@ -60,6 +65,18 @@ class QRCodeScannerViewModel: NSObject, ViewModel {
                         try self.focus(at: focusPoint, for: device)
                         rxFocusPoint.onNext(focusPoint)
                     } catch { }
+                })
+                .disposed(by: disposeBag)
+            
+            rxActive
+                .distinctUntilChanged()
+                .subscribe(onNext: { isActive in
+                    if isActive {
+                        self.input.detectedObject.onNext([])
+                        session.startRunning()
+                    } else {
+                        session.stopRunning()
+                    }
                 })
                 .disposed(by: disposeBag)
         } catch {
@@ -92,8 +109,6 @@ class QRCodeScannerViewModel: NSObject, ViewModel {
             session.sessionPreset = .high
         }
         
-        session.startRunning()
-        
         return session
     }
     
@@ -116,7 +131,13 @@ extension QRCodeScannerViewModel: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         let readableCodeObjects = metadataObjects.compactMap { $0 as? AVMetadataMachineReadableCodeObject }
         
-        internalInput.detectedObject.onNext(readableCodeObjects)
+        if let object1 = readableCodeObjects.first, let object2 = readableCodeObjects.last, readableCodeObjects.count == 2 {
+            if let invoice = Invoice(object1: object1, object2: object2) {
+                input.invoice.onNext(invoice)
+            }
+        }
+        
+        input.detectedObject.onNext(readableCodeObjects)
     }
     
 }

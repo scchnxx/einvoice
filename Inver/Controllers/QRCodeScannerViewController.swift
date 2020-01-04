@@ -44,7 +44,7 @@ class QRCodeScannerViewController: UIViewController {
         
         viewModel.output.session
             .subscribe(onNext: { session in
-                session.startRunning()
+                self.viewModel.input.active.onNext(true)
                 self.setupPreviewView(with: session)
                 self.setupDetectedObjectBindings()
                 self.errorLabel.isHidden = true
