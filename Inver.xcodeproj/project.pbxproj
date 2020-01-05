@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		096ADF7A23BFADF800DB949E /* InvAppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096ADF7923BFADF800DB949E /* InvAppID.swift */; };
+		096E85BF23C26A93005244A3 /* InvoiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E85BE23C26A93005244A3 /* InvoiceDetailViewController.swift */; };
+		096E85C123C26DBA005244A3 /* InvoiceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E85C023C26DBA005244A3 /* InvoiceDetailViewModel.swift */; };
 		8502E98623BDCADF00251134 /* InvHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502E98523BDCADF00251134 /* InvHeader.swift */; };
 		8502E98A23BDD20A00251134 /* InvDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502E98923BDD20A00251134 /* InvDetail.swift */; };
 		8549CB2B23BDF22E00226362 /* QRCodeScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		096ADF7923BFADF800DB949E /* InvAppID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InvAppID.swift; path = ../InvAppID.swift; sourceTree = "<group>"; };
+		096E85BE23C26A93005244A3 /* InvoiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDetailViewController.swift; sourceTree = "<group>"; };
+		096E85C023C26DBA005244A3 /* InvoiceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDetailViewModel.swift; sourceTree = "<group>"; };
 		8502E98523BDCADF00251134 /* InvHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvHeader.swift; sourceTree = "<group>"; };
 		8502E98923BDD20A00251134 /* InvDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvDetail.swift; sourceTree = "<group>"; };
 		8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewModel.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			children = (
 				85E5959523BEF28F00C77B7A /* ViewModel.swift */,
 				8549CB2A23BDF22E00226362 /* QRCodeScannerViewModel.swift */,
+				096E85C023C26DBA005244A3 /* InvoiceDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 			children = (
 				8594E58C23BD82FA000B5191 /* MainViewController.swift */,
 				8594E5AC23BD9C62000B5191 /* QRCodeScannerViewController.swift */,
+				096E85BE23C26A93005244A3 /* InvoiceDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 				85E5959423BECDEE00C77B7A /* Invoice.swift in Sources */,
 				8594E58B23BD82FA000B5191 /* SceneDelegate.swift in Sources */,
 				8549CB2B23BDF22E00226362 /* QRCodeScannerViewModel.swift in Sources */,
+				096E85C123C26DBA005244A3 /* InvoiceDetailViewModel.swift in Sources */,
+				096E85BF23C26A93005244A3 /* InvoiceDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

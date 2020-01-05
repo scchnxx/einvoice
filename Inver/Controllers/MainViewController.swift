@@ -15,15 +15,10 @@ class MainViewController: UIViewController {
     }
     
     func didDetectedQRCode(object1: AVMetadataMachineReadableCodeObject, object2: AVMetadataMachineReadableCodeObject) {
-        if let paper = Invoice(object1: object1, object2: object2) {
-            print(paper.invoiceInfo.number)
-            for detail in paper.productDetails {
-                print("\tName: \(detail.name), Quantity: \(detail.quantity), Price: \(detail.price)")
-            }
-            return
-        } else {
-            print("err")
-        }
+        guard let invoice = Invoice(object1: object1, object2: object2),
+            !(presentedViewController is InvoiceDetailViewController) else { return }
+        
+        performSegue(withIdentifier: "InvoiceDetailViewController", sender: invoice)
     }
     
     func startDetection() {
@@ -45,6 +40,10 @@ class MainViewController: UIViewController {
         case let qrCodeScannerVC as QRCodeScannerViewController:
             self.qrCodeScannerVC = qrCodeScannerVC
             startDetection()
+            
+        case let invDetailVC as InvoiceDetailViewController:
+            guard let invoice = sender as? Invoice else { break }
+            invDetailVC.viewModel.input.invoice.onNext(invoice)
             
         default:
             break
