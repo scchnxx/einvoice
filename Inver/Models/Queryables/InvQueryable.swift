@@ -20,15 +20,12 @@ enum InvQueryError: Error {
 
 extension InvQueryable {
     
-    fileprivate static func url(params: [Parameters: String]) throws -> URL {
+    fileprivate static func url(parameters: [Parameters: String]) throws -> URL {
         guard var components = URLComponents(string: baseURL) else { throw InvQueryError.genURLError }
-        guard params.count == Parameters.allCases.count else { throw InvQueryError.missingParameters }
+        guard parameters.count == Parameters.allCases.count else { throw InvQueryError.missingParameters }
         
-        components.queryItems = []
-        
-        for param in params {
-            let item = URLQueryItem(name: param.key.rawValue, value: param.value)
-            components.queryItems?.append(item)
+        components.queryItems = parameters.map { key, value in
+            URLQueryItem(name: key.rawValue, value: value)
         }
         
         let appIDItem = URLQueryItem(name: "appID", value: InvAppID)
@@ -54,7 +51,7 @@ extension Reactive where Base == URLSession {
             let url: URL
             
             do {
-                url = try type.url(params: parameters)
+                url = try type.url(parameters: parameters)
             } catch {
                 observer.on(.error(error))
                 return Disposables.create()

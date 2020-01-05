@@ -3,9 +3,12 @@ import Foundation
 struct InvHeader: InvQueryable {
     
     enum Parameters: String, CaseIterable {
+        /// Default Value: QRCode / Barcode
         case type
         case invNum
+        /// Default Value: V2
         case generation
+        // yyyy/MM/dd
         case invDate
     }
     

@@ -1,11 +1,20 @@
 import Foundation
 import AVFoundation
 
+fileprivate func TWDateToCEDate(_ string: String) -> Date? {
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "zh_Hant_TW")
+    formatter.timeZone = TimeZone(identifier: "Asia/Taipei")
+    formatter.dateFormat = "yyyMMdd"
+    formatter.calendar = Calendar(identifier: Calendar.Identifier.republicOfChina)
+    return formatter.date(from: string)
+}
+
 struct Invoice {
     
     struct Info {
         var number: String
-        var date: String
+        var date: Date
         var random: String
         var untaxedSales: Int
         var totalSales: Int
@@ -31,14 +40,15 @@ struct Invoice {
             let salerIDIndex = components[0].index(buyerIDIndex, offsetBy: 8)
             let encryptIndex = components[0].index(salerIDIndex, offsetBy: 24)
             
-            guard let untaxedSalesInt = hexToInt(string: String(components[0][randomIndex..<untaxedSalesIndex])),
+            guard let twdate = TWDateToCEDate(String(components[0][numberIndex..<dateIndex])),
+                let untaxedSalesInt = hexToInt(string: String(components[0][randomIndex..<untaxedSalesIndex])),
                 let totalSalesInt = hexToInt(string: String(components[0][untaxedSalesIndex..<totalSalesIndex])),
                 let numberOfProductKindsInt = Int(String(components[2])),
                 let numberOfProductsInt = Int(String(components[3])),
                 let encodingTypeInt = Int(String(components[4])) else { return nil }
             
             number       = String(components[0][..<numberIndex])
-            date         = String(components[0][numberIndex..<dateIndex])
+            date         = twdate
             random       = String(components[0][dateIndex..<randomIndex])
             untaxedSales = untaxedSalesInt
             totalSales   = totalSalesInt
@@ -67,13 +77,15 @@ struct Invoice {
         let strings = [string1, string2]
             .map { $0.split(separator: ":") }
             .map { $0.map(String.init) }
+            .map { $0.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) } }
         
         guard let leftStrings = strings.first(where: { $0.count >= 5 && $0[0].count == 77 }),
             let rightStrings = strings.first(where: { $0.first?.hasPrefix("**") == true }) else { return nil }
         
         let infoStrings = [String](leftStrings[..<5])
         let right = rightStrings.count.isMultiple(of: 3) ? rightStrings : []
-        let productStrings = (leftStrings[5...] + right).map({ $0.replacingOccurrences(of: "*", with: "") })
+        let productStrings = (leftStrings[5...] + right)
+            .map { $0.replacingOccurrences(of: "*", with: "") }
         
         guard let info = Info(components: infoStrings), productStrings.count.isMultiple(of: 3) else { return nil }
         
